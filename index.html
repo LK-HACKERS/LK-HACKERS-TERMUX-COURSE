@@ -115,6 +115,7 @@
 <body>
 <div class="page">
     <div class="content">
+        <!-- ======================== පාඩම් 01 - 04 (කලින් තිබුණු සියල්ල) ======================== -->
         <!-- 1. පළමු අභ්යාසය (Practical Task 01) -->
         <div class="section">
             <div class="text-block">
@@ -295,7 +296,7 @@
             </div>
         </div>
 
-        <!-- 8. 04 වැනි පාඩම: බලතල ලබා ගැනීම (Permissions) - නවතම පාඩම -->
+        <!-- 8. 04 වැනි පාඩම: බලතල ලබා ගැනීම (Permissions) -->
         <div class="section">
             <div class="text-block">
                 <strong>🛡️ LK Hackers - 04 වැනි පාඩම: බලතල ලබා ගැනීම (Permissions)</strong><br><br>
@@ -324,7 +325,127 @@
             </div>
         </div>
 
-        <!-- අවසානය - කිසිදු අමතර දෙයක් නැත -->
+        <!-- ======================== අලුත් පාඩම් 05-08 ======================== -->
+
+        <!-- 9. 05 වැනි පාඩම: ජාලගත වීම (Networking Basics) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 05 වැනි පාඩම: ජාලගත වීම (Networking Basics)</strong><br><br>
+                අද අපි පාඩම් කරන්නේ අන්තර්ජාලයේ දේවල් කොහොමද එකිනෙක සම්බන්ධ වෙන්නේ කියලා. හැකින් වලදී අපි ගොඩක් වෙලාවට වැඩ කරන්නේ IP Addresses සහ Ports එක්ක.<br><br>
+                <strong>1. මුලින්ම දැනගත යුතු දේවල්</strong><br>
+                <strong>IP Address (Internet Protocol):</strong> ඕනෑම උපාංගයකට අන්තර්ජාලයේ තියෙන "ලිපිනය" මේකයි. (උදා: 192.168.1.1)<br>
+                <strong>Ports:</strong> ඒ ලිපිනයට තියෙන "දොරවල්". එක එක සේවාවන් ක්‍රියාත්මක වෙන්නේ එක එක දොරවල් හරහා.<br>
+                උදා: වෙබ් සයිට් එකක් බැලීමට 80 පෝට් එක, SSH සඳහා 22 පෝට් එක.<br><br>
+                <strong>2. Termux හරහා බලමු (Practical Commands)</strong><br>
+                අද අපි අපේ ෆෝන් එක ජාලයට සම්බන්ධ වෙලා තියෙන විදිහ බලමු:
+            </div>
+            <div class="cmd">
+                ifconfig: ඔයාගේ ෆෝන් එකේ IP ලිපිනය බලාගන්න. (පළමු වතාවේ වැඩ නොකරයි නම් pkg install net-tools කියලා ටයිප් කරලා ඉන්ස්ටෝල් කරගන්න.)<br>
+                ping google.com: ගූගල් සර්වර් එක ඔයාගේ ෆෝන් එකට සම්බන්ධ වෙනවද කියලා පරීක්ෂා කරන්න. <em>(Ctrl සමග C එබුවාම නතර වෙනවා.)</em><br>
+                nmap: ජාලයක තියෙන දොරවල් (Ports) හොයාගන්න පාවිච්චි කරන ලෝක ප්‍රසිද්ධ ටූල් එකක්.
+            </div>
+            <div class="text-block">
+                CYBER BLACK LION<br><br>
+                <strong>ඇයි මේවා වැදගත්?</strong><br>
+                අපි යම් පද්ධතියකට ඇතුළු වීමට උත්සාහ කරද්දී, මුලින්ම කරන්නේ ඒ පද්ධතියේ විවෘතව තියෙන දොරවල් (Open Ports) මොනවද කියලා හොයන එක (Scanning). ඒක තමයි හැකින්වල පළමු පියවර.<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 05)</strong><br>
+                1. <strong>pkg install net-tools</strong> ගහලා ටූල් එක ඉන්ස්ටෝල් කරගන්න.<br>
+                2. <strong>ifconfig</strong> ගහලා ඔයාගේ IP එක හොයාගන්න. (එතන inet කියලා තියෙන අංක ටික බලන්න).<br>
+                3. <strong>ping google.com</strong> ගහලා තත්පර 5ක් වගේ තියලා Ctrl සමග C ගහලා නවත්වන්න.<br><br>
+                <strong>චැලේන්ජ් එක:</strong> ඔයාගේ IP ලිපිනය පේන ifconfig එකේ ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a> (ඔයාගේ පෞද්ගලික IP එකේ අංක ඕන නම් පොඩ්ඩක් මැකුවට කමක් නැහැ, ආරක්ෂාවට හොඳයි).<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 10. 06 වැනි පාඩම: ඔත්තු බැලීම (Reconnaissance with Nmap) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 06 වැනි පාඩම: ඔත්තු බැලීම (Reconnaissance with Nmap)</strong><br><br>
+                අපි මීට කලින් පාඩම් වලදී ඉගෙන ගත්තා IP සහ Ports කියන්නේ මොකක්ද කියලා. අද අපි ඒ දේවල් පාවිච්චි කරලා වෙනත් පද්ධතියක් පරීක්ෂා කරන්නේ කොහොමද කියලා ඉගෙන ගමු. මේ සඳහා අපි පාවිච්චි කරන්නේ Nmap (Network Mapper) කියන ටූල් එක.<br><br>
+                <strong>Nmap කියන්නේ මොකක්ද?</strong><br>
+                Nmap යනු ජාලයක ඇති උපාංග සහ එහි ඇති "විවෘත දොරවල්" (Open Ports) හඳුනා ගැනීමට පාවිච්චි කරන ලෝකයේ ප්‍රබලම ටූල් එකයි. හැකර් කෙනෙක් පද්ධතියකට පහර දෙන්න කලින් කරන්නේ මේකෙන් ඒ පද්ධතිය ස්කෑන් කරලා බලන එක.<br><br>
+                <strong>Termux වල ස්ථාපනය සහ භාවිතය</strong><br>
+                Install කරන්න:
+            </div>
+            <div class="cmd">
+                pkg install nmap
+            </div>
+            <div class="text-block">
+                ස්කෑන් කරන්න: <strong>nmap &lt;IP Address&gt;</strong><br><br>
+                <strong>වැදගත් අනතුරු ඇඟවීමක් (Ethical Warning)</strong><br>
+                මචං, මේක ගොඩක් වැදගත්. Nmap පාවිච්චි කරලා අනිත් අයගේ පද්ධති හෝ වෙබ් සයිට් ස්කෑන් කරන එක නීති විරෝධී සහ අනාරක්ෂිත වැඩක්. අපි මේක ඉගෙන ගන්නේ අපේම වයි-ෆයි එකේ තියෙන උපාංග පරීක්ෂා කරන්න විතරයි!<br>
+                CYBER BLACK LION<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 06)</strong><br>
+                1. <strong>pkg install nmap</strong> ගහලා ටූල් එක ඉන්ස්ටෝල් කරගන්න.<br>
+                2. ඔයාගේ ගෙදර ඉන්න තව කෙනෙක්ගේ ෆෝන් එකක හෝ ලැප්ටොප් එකක IP එක හොයාගන්න. (නැත්නම් ඔයාගේ Router එකේ IP එක - සාමාන්‍යයෙන් 192.168.1.1)<br>
+                3. <strong>nmap 192.168.1.1</strong> කියලා ගහලා බලන්න ඒකේ මොන වගේ පෝට්ස් ද විවෘත වෙලා තියෙන්නේ කියලා.<br><br>
+                <strong>චැලේන්ජ් එක:</strong> ඔයාගේ ස්කෑන් එකේ ප්‍රතිඵලය (Output) එකේ ස්ක්‍රීන්ෂොට් එකක් එවන්න. <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                එතන තියෙන 'Open Ports' මොනවාද කියලා අපිට පේන්න ඕනේ.<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 11. 07 වැනි පාඩම: මෙටාස්ප්ලොයිට් (Introduction to Metasploit) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 07 වැනි පාඩම: මෙටාස්ප්ලොයිට් (Introduction to Metasploit)</strong><br><br>
+                අද අපි ඉගෙන ගන්නේ හැකින් ලෝකයේ ප්‍රබලම මෙවලම වන Metasploit Framework ගැන. අපි කලින් Nmap එකෙන් පද්ධතියක තියෙන දොරවල් (Ports) හොයාගත්තා නම්, Metasploit එකෙන් කරන්නේ ඒ දොරවල් හරහා පද්ධතිය ඇතුළට රිංගන එක.<br><br>
+                <strong>1. Metasploit කියන්නේ මොකක්ද?</strong><br>
+                මෙය සාමාන්‍යයෙන් භාවිතා කරන්නේ පද්ධති වල තියෙන දුර්වලතා (Vulnerabilities) පරීක්ෂා කිරීමටයි. ආරක්ෂක විශේෂඥයින් (Ethical Hackers) මේක පාවිච්චි කරන්නේ පද්ධතියක් හැක් වෙන්න තියෙන ඉඩකඩ කොච්චරද කියලා හොයාගෙන, ඒ දොරවල් වහලා දාන්න.<br><br>
+                <strong>2. Termux වල භාවිතය</strong><br>
+                Metasploit ඉන්ස්ටෝල් කරන එක පොඩ්ඩක් සංකීර්ණයි.<br>
+                (මේක ඉන්ස්ටෝල් වෙන්න ටික වෙලාවක් යනවා, ඉවසීමෙන් ඉන්න)
+            </div>
+            <div class="cmd">
+                source <(curl -fsSL https://kutt.it/msf)
+            </div>
+            <div class="text-block">
+                රන් කරන්න: <strong>msfconsole</strong><br><br>
+                <strong>3. අනතුරු ඇඟවීම. (Ethical Mindset)</strong><br>
+                මචං, මේ ටූල් එක ගොඩක් බලගතුයි. කවදාවත් අවසර නැති කිසිම කෙනෙක්ගේ ෆෝන් එකකට හෝ පරිගණකයකට මේකෙන් ඇතුළු වෙන්න එපා. අපි මේක ඉගෙන ගන්නේ පද්ධති ආරක්ෂා කරන්නේ කොහොමද කියලා තේරුම් ගන්න විතරයි.<br>
+                CYBER BLACK LION<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 07)</strong><br>
+                අද අභියෝගය තමයි Metasploit එක හරියට ඉන්ස්ටෝල් කරගන්න එක.<br>
+                ඉන්ස්ටෝල් වුණාට පස්සේ <strong>msfconsole</strong> කියලා ගහන්න.<br>
+                එතකොට එන "Metasploit Banner" එක (ඒ ලස්සන ආට් එක) වැටෙන එකේ ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                <strong>චැලේන්ජ් එක:</strong> කාටද මුලින්ම Metasploit එක සාර්ථකව 'Load' කරගන්න පුළුවන් වෙන්නේ කියලා බලමු!<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 12. 08 වැනි පාඩම: Python හැඳින්වීම (Automation) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 08 වැනි පාඩම: Python හැඳින්වීම (Automation)</strong><br><br>
+                අද ඉඳන් අපි ඉගෙන ගන්නේ අනිත් අය හදපු ටූල්ස් පාවිච්චි කරන එක නෙවෙයි, අපේම ටූල්ස් හදාගන්න විදිහ. ඒ සඳහා තියෙන ලෝකයේ හොඳම භාෂාව තමයි Python.<br><br>
+                <strong>ඇයි Python?</strong><br>
+                1. සරලයි: කෝඩ් එක කියවද්දිම තේරෙනවා.<br>
+                2. බලගතුයි: හැකින් සඳහා අවශ්‍ය ඕනෑම ටූල් එකක් (Network Scanners, Password Crackers) මේකෙන් පහසුවෙන් හදන්න පුළුවන්.<br><br>
+                <strong>Termux වල Python පටන් ගනිමු.</strong><br>
+                1. මුලින්ම Python ඉන්ස්ටෝල් කරගන්න:
+            </div>
+            <div class="cmd">
+                pkg install python
+            </div>
+            <div class="text-block">
+                2. දැන් අපි බලමු Python වලින් මොකක් හරි දෙයක් Print කරන්නේ කොහොමද කියලා.<br>
+                • <strong>python</strong> කියලා ටයිප් කරලා එන්ටර් කරන්න (එතකොට එනවා >>> ලකුණක්)<br>
+                • ඒ ළඟින් මෙහෙම ලියන්න: <strong>print("LK Hackers is here!")</strong><br>
+                • එන්ටර් කරන්න. ඔන්න ඔයාගේ පළමු පේළිය කෝඩ් වුණා!<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 08)</strong><br>
+                1. Python ඉන්ස්ටෝල් කරගන්න.<br>
+                2. පහත කෝඩ් එක පාවිච්චි කරලා ඔයාගේ නම පෙන්වන්න:<br>
+                <strong>print("My Name is [ඔයාගේ නම]")</strong><br>
+                3. Python වලින් ඉවත් වෙන්න <strong>exit()</strong> කියලා ටයිප් කරන්න.<br><br>
+                <strong>චැලේන්ජ් එක:</strong> ඔයාගේ Termux එකේ ඔයාගේ නම Python වලින් Print කරපු ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- අවසානය -->
     </div>
     <div class="footer">
         CYBER BLACK LION · TERMUX COURSE · LK-HACKERS GRAY HAT
