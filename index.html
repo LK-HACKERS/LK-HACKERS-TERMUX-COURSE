@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>CYBER BLACK LION - TERMUX COURSE | LK-HACKERS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #0b0e14;
+            font-family: 'Segoe UI', 'Fira Code', 'Courier New', monospace;
+            color: #eceff4;
+            padding: 24px 16px;
+            line-height: 1.55;
+        }
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #0f121a;
+            border-radius: 32px;
+            border: 1px solid #2a2f3c;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.6);
+        }
+        .content {
+            padding: 28px 24px;
+        }
+        .section {
+            margin-bottom: 32px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #232836;
+        }
+        .section:last-child {
+            border-bottom: none;
+        }
+        .cmd {
+            background: #07090f;
+            padding: 12px 18px;
+            border-radius: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.9rem;
+            border-left: 4px solid #f5c542;
+            margin: 16px 0;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            color: #d6deeb;
+        }
+        .warning-box {
+            background: #1f1b1a;
+            border-left: 5px solid #e06c75;
+            padding: 12px 20px;
+            border-radius: 20px;
+            margin: 18px 0;
+        }
+        .success-box {
+            background: #16222b;
+            border-left: 5px solid #98c379;
+            padding: 12px 20px;
+            border-radius: 20px;
+        }
+        .btn-group {
+            margin: 15px 0 10px;
+        }
+        .wa-btn {
+            display: inline-block;
+            background: #25D366;
+            color: #0a0c0f;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 40px;
+            margin-right: 12px;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+        .wa-btn-dark {
+            background: #1f2c34;
+            color: #e5c07b;
+            border: 1px solid #3b4a54;
+        }
+        .link {
+            color: #e5c07b;
+            text-decoration: none;
+            border-bottom: 1px dotted;
+        }
+        hr {
+            margin: 20px 0;
+            border-color: #2a2f3c;
+        }
+        .text-block {
+            white-space: pre-wrap;
+            margin-bottom: 16px;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin: 20px 0 8px 0;
+            color: #e5c07b;
+            font-weight: 600;
+        }
+        h4 {
+            font-size: 1.2rem;
+            margin: 16px 0 6px;
+            color: #cbd5e6;
+        }
+        strong {
+            color: #f5c542;
+        }
+        .footer {
+            background: #06080e;
+            text-align: center;
+            padding: 18px;
+            font-size: 0.75rem;
+            color: #6e7a93;
+            border-top: 1px solid #1e232e;
+        }
+        a {
+            color: #e5c07b;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="content">
+        <!-- හරියටම ලබා දුන් සියලුම පෙළ / කොටස් පහතින් ඇතුළත්. කිසිදු අමතර විස්තරයක් නැත. -->
+
+        <!-- 1. පළමු අභ්යාසය + පසුබිම -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛠 පළමු අභ්‍යාසය (Practical Task 01)</strong><br>
+                අද අපි අපේ Termux එක ටිකක් ලස්සන කරලා, ඒකේ තියෙන පදනම තේරුම් ගමු. ඔයාලගේ Termux එක ඕපන් කරලා පහත කමාන්ඩ්ස් එකින් එක ටයිප් කරන්න:
+            </div>
+            <div class="cmd">
+                pkg update && pkg upgrade <br>
+                (මේකෙන් කරන්නේ අපේ ටූල්ස් ඔක්කොම අලුත් කරන එක)<br><br>
+                whoami<br>
+                (පද්ධතියේ ඔයා කවුද කියලා බලාගන්න)<br><br>
+                ls<br>
+                (ඔයාගේ ෆෝන් එකේ තියෙන ෆයිල්ස් බලන්න)<br><br>
+                date<br>
+                (වෙලාව බලාගන්න)
+            </div>
+            <div class="text-block">
+                CYBER BLACK LION TERMUX COURSE 1<br><br>
+                මචන්ලා ඔන්න චැලේන්ජ් එක:<br>
+                මේ කමාන්ඩ්ස් ටික ටයිප් කරලා, ඔයාගේ Termux එකේ අවුට්පුට් එකේ ස්ක්‍රීන්ෂොට් එකක් ගහලා
+                <a href="https://chat.whatsapp.com/EaDATu8NGat5x2BoJwXKsA" target="_blank" class="link">https://chat.whatsapp.com/EaDATu8NGat5x2BoJwXKsA</a> මේ ගෲප් එකට දාන්න. 
+                අපි බලමු කාටද මේක සාර්ථකව පටන් ගන්න පුළුවන් වෙන්නේ කියලා!
+            </div>
+            <div class="warning-box">
+                මතක තියාගන්න: <br>
+                Linux කියන්නේ හරිම නිවැරදි දේවල් වලට කැමති දෙයක්. පොඩි අකුරක් වැරදුනත් වැඩ කරන්නේ නැහැ. 
+                මොනවා හරි දෝෂයක් (Error) ආවොත්, ඒකේ ස්ක්‍රීන්ෂොට් එකක් මේ ගෘප් එකට <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a> එවන්න, අපි ඒක විසඳමු.
+            </div>
+            <div class="btn-group">
+                <a href="https://chat.whatsapp.com/EaDATu8NGat5x2BoJwXKsA" target="_blank" class="wa-btn">📱 ගෲප් එකට ස්ක්‍රීන්ෂොට් එවන්න</a>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="wa-btn wa-btn-dark">🐞 Error report group</a>
+            </div>
+        </div>
+
+        <!-- 2. පළමු පාඩම: Termux සමඟ මූලික ගමන -->
+        <div class="section">
+            <div class="text-block">
+                <strong>📢 පළමු පාඩම:</strong><br>
+                Termux සමඟ මූලික ගමන<br><br>
+                ආයුබෝවන් හැමෝටම!<br>
+                අද ඉඳන් අපි ඉගෙන ගන්න පටන් ගන්නේ ලෝකයේ ප්‍රබලම හැකර්වරුන් සහ ඩිවලොපර්ස්ලා පාවිච්චි කරන ආයුධයක් ගැන. ඒ තමයි Termux.<br>
+                Termux කියන්නේ මොකක්ද? සරලව කිව්වොත්, Termux කියන්නේ ඔබේ ඇන්ඩ්‍රොයිඩ් ෆෝන් එක ඇතුලේ තියෙන කුඩා "Linux පරිගණකයක්". පරිගණක වල තියෙන terminal එක ෆෝන් එකට ගෙනාවා වගේ තමයි. මේකෙන් ඔයාට පුළුවන් ෆෝන් එකේ තියෙන සීමාවන් ඉක්මවා ගිහින් වැඩ කරන්න.<br>
+                CYBER BLACK LION<br><br>
+                ඇයි අපි මේක ඉගෙන ගන්නේ?<br>
+                හැකින් කියන්නේ එක එක ඇප්ස් බාගෙන බොත්තම් ඔබන එක නෙවෙයි. හැකින් කියන්නේ පද්ධතියක් ඇතුලේ තියෙන දේවල් තේරුම් අරගෙන ඒවා පාලනය කරන එක. Termux අපිට උගන්වන්නේ ඒ පාලනය ගන්නේ කොහොමද කියලා.<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 3. LK-Hackers GRAY HAT - අපේ ගමන පටන් ගනිමු! -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK-Hackers GRAY HAT - අපේ ගමන පටන් ගනිමු!</strong><br>
+                හැමෝටම ආයුබෝවන්!<br>
+                • අද ඉඳන් අපි මේ ගමන පටන් ගන්නේ ලොකු අරමුණක් ඇතුව. ගොඩක් අය හිතන්නේ හැකින් කියන්නේ බොත්තමක් එබුවහම මැජික් වගේ සිද්ධ වෙන දෙයක් කියලා. නමුත් ඇත්තම කතාව ඒක නෙවෙයි.<br>
+                අපේ මේ කණ්ඩායමේ ඉන්න ඔයාලා හැමෝම අද ඉඳන් "Grey Hat" මනසකින් හිතන්න ඕනේ. හැකින් කියන්නේ සොරකම් කරන එක නෙවෙයි, පද්ධතියක් කොහොමද වැඩ කරන්නේ කියලා හොයලා බලන (Reverse Engineering) කලාවක්.<br>
+                අපේ ගමනේ මූලධර්ම 4ක්:<br>
+                • පර්යේෂණාත්මක මනස: හැම දෙයක් දිහාම "ඇයි මේක මෙහෙම වෙන්නේ?" කියන ප්‍රශ්නයෙන් බලන්න.<br>
+                ඉවසීම: එක සාර්ථක ප්‍රතිඵලයක් ගන්න පැය ගණන්, දවස් ගණන් වුණත් මහන්සි වෙන්න සූදානම් වෙන්න.<br>
+                කුතුහලය: අපි Linux, OSINT, Social Engineering වගේ රසවත් දේවල් හරහා මේක ඉගෙන ගන්නවා.<br>
+                සදාචාරය: හැකින් කියන්නේ විනාශ කරන්න නෙවෙයි, පද්ධතිවල තියෙන හිඩැස් හොයාගෙන ඒවා ආරක්ෂා කරන්න ඉගෙන ගන්න එක.<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 4. අපේ වැඩපිළිවෙල (Roadmap) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🚀 අපේ වැඩපිළිවෙල (Roadmap)</strong><br>
+                * අපි එකපාර ලොකු දේවල් කරන්නේ නැහැ. පියවරෙන් පියවර මෙහෙමයි යන්නේ:<br>
+                අදියර 1: දින 7ක "Linux & Terminal Mastery" චැලේන්ජ් එක (අපේ මූලික ආයුධය Termux).<br>
+                අදියර 2: සරල Network සන්නිවේදනය හඳුනාගැනීම.<br>
+                අදියර 3: සරල Scripting (Python වගේ) හරහා ඔටෝමේෂන්.<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 5. LK-HACKERS (GRAY HAT) Environment Setup + Learning Path -->
+        <div class="section">
+            <div class="text-block">
+                <strong>LK-HACKERS (GRAY HAT)</strong><br>
+                මචන්ලා අපි වැඩේ පටන් ගමු. Gray Hat Hacking කියන්නේ නීතිමය සීමාවන් අස්සේ ඉඳගෙන, හැබැයි සිස්ටම් එකක තියෙන දුර්වලතා හොයලා ඒවට විසඳුම් දෙන (සමහර වෙලාවට අවසර නැතුව වුණත් හානියක් නොකරන) ක්‍රමවේදයට.<br>
+                මේක එක දවසින් කරන්න පුළුවන් දෙයක් නෙවෙයි, ඒ නිසා මම මේක Syllabus එකක් විදිහට කොටස් වලට බෙදලා දෙන්නම්. අපි සරල තැන ඉඳන් Scripting සහ Tools දක්වා යමු.<br><br>
+                <strong>Environment Setup (අවශ්‍ය පරිසරය සකසා ගැනීම)</strong><br>
+                ඕනෑම හැකර් කෙනෙක්ට තමන්ගේ "Lab" එක වැදගත්. අපි මේ Platform හතරම පාවිච්චි කරනවා:<br>
+                Termux (Android): ගමනක් බිමනක් යනකොට ෆෝන් එකෙන් වැඩේ කරන්න.<br>
+                Kali Linux: Hacking වලටම හදපු OS එක (PC/Laptop).<br>
+                Ubuntu: Server side සහ Scripting ඉගෙන ගන්න හොඳම තැන.<br>
+                iSH Shell (iOS): iPhone පාවිච්චි කරනවා නම් Linux පාරක් දාගන්න.<br><br>
+                <strong>පළමු පියවර: Update & Upgrade</strong><br>
+                ඕනෑම Linux ටර්මිනල් එකක් ගත්ත ගමන් මුලින්ම මේ Command එක ගහන්න:<br>
+                sudo apt update && sudo apt upgrade -y<br>
+                (Termux වලදී pkg update && pkg upgrade)<br><br>
+                <strong>The Learning Path (ඉගෙනීමේ පියවර)</strong><br>
+                Lesson 1: Linux Fundamentals & CLI<br>
+                Lesson 2: Networking Deep Dive<br>
+                Lesson 3: Information Gathering (Reconnaissance)<br>
+                Lesson 4: Vulnerability Analysis<br>
+                Lesson 5: Exploitation (The "Hack")<br><br>
+                <strong>Scripting & Automation</strong><br>
+                Gray Hat කෙනෙක් වුණාම හැමදේම අතින් කර කර ඉන්න වෙලාවක් නැහැ. අපි අපේම Tools හදන්න ඕනේ.<br>
+                Bash Scripting: වැඩ ඉක්මන් කරගන්න සරල Scripts හදන්න.<br>
+                Python for Hackers: Socket programming, Request handling සහ Brute force tools හදන්න පාවිච්චි කරන්නේ Python.<br><br>
+                <strong>The Gray Hat Rules</strong><br>
+                Permission: පුළුවන් හැමවෙලේම අවසර ඇතුව වැඩ කරන්න (Bug Bounty වගේ).<br>
+                No Damage: කිසිම වෙලාවක Data delete කරන්න හෝ හානි කරන්න එපා.<br>
+                Stay Anonymous: VPN සහ ProxyChains පාවිච්චි කරන්න ඉගෙන ගන්න.
+            </div>
+            <div class="btn-group">
+                <a href="https://lk-hackers.github.io/LK-HACKERS-WebSite/" target="_blank" class="wa-btn" style="background:#2c3e50;">🌐 LK-HACKERS WEBSITE</a>
+                <a href="https://lk-hackers.github.io/LK-HACKERS-WebSite-ChatRoom/" target="_blank" class="wa-btn" style="background:#2c3e50;">💬 CHAT ROOM</a>
+                <a href="https://github.com/LK-HACKERS/LK-HACKERS" target="_blank" class="wa-btn" style="background:#0d1117;">🐙 HACKING TOOLS</a>
+            </div>
+            <div class="text-block">CYBER BLACK LION</div>
+        </div>
+
+        <!-- 6. 02 වැනි පාඩම: Linux හි සැරිසැරීම (Navigation) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 02 වැනි පාඩම:</strong><br>
+                Linux හි සැරිසැරීම (Navigation)<br>
+                • කලින් දවසේ කමාන්ඩ්ස් ටික කරපු හැමෝටම සුබ පැතුම්! අද අපි ඉගෙන ගන්නේ Linux වල "සැරිසරන" හැටි. ඕනෑම හැකර් කෙනෙක්ගේ ෆෝන් එක හෝ පරිගණකය හරියටම තියෙන්නේ කොහෙද කියලා හොයාගන්න මේ කමාන්ඩ්ස් දැනගන්නම ඕනේ.<br>
+                1. අද අපි ඉගෙන ගන්න කමාන්ඩ්ස් (Basic Navigation)<br>
+                ඔයාගේ Termux එකේ මේවා ටයිප් කරලා බලන්න:
+            </div>
+            <div class="cmd">
+                pwd (Print Working Directory): <br>• ඔයා දැනට ඉන්නේ මොන ෆෝල්ඩරේද කියලා බලාගන්න මේක පාවිච්චි කරනවා.<br>
+                ls (List): <br>• මම කලින් කිව්වා වගේ, ෆෝල්ඩර් එකක තියෙන ලිපිගොනු සහ ෆෝල්ඩර්ස් පෙන්නනවා.<br>
+                cd (Change Directory): <br>• එක ෆෝල්ඩර් එකක ඉඳන් තව එකකට යන්න මේක පාවිච්චි කරනවා.<br>
+                උදාහරණයක්: cd storage<br>
+                mkdir (Make Directory): අලුත් ෆෝල්ඩර් එකක් හදන්න.<br>
+                උදාහරණයක්: mkdir MyFirstFolder<br>
+                clear: තිරය පිරිසිදු කරන්න.
+            </div>
+            <div class="text-block">
+                ඇයි මේවා වැදගත්?<br>
+                හැකර් කෙනෙක් පද්ධතියකට ඇතුළු වුණාම, මුලින්ම කරන්නේ එතන තියෙන ෆයිල්ස් හොයන එක. ඒ ෆයිල්ස් තියෙන්නේ කොහෙද කියලා දන්නේ නැත්නම් වැඩක් කරන්න බැහැ. ඔන්න ඒ නිසා තමයි මේ අකුරු ටික වැදගත් වෙන්නේ.<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 02)</strong><br>
+                මුලින්ම pwd ගහලා ඔයා ඉන්නේ කොහෙද කියලා බලන්න.<br>
+                mkdir lk_hackers_test කියලා අලුත් ෆෝල්ඩරයක් හදන්න.<br>
+                ls ගහලා ඒ ෆෝල්ඩරේ හැදිලා තියෙනවද බලන්න.<br>
+                cd lk_hackers_test ගහලා අර හදපු ෆෝල්ඩරේ ඇතුළට යන්න.<br>
+                දැන් ආයේ pwd ගහලා බලන්න ඔයාගේ පාර (Path) වෙනස් වෙලාද කියලා.<br>
+                අභියෝගය: මේ පියවර 5 සාර්ථකව කරපු කෙනෙක්, අවසාන pwd එකේදී ඔයාට ලැබුණු පාර (Path) එකේ ස්ක්‍රීන්ෂොට් එකක් ගහලා දාන්න. <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a> මචංලා.<br>
+                මේ ටික කරද්දී කාට හරි ෆෝල්ඩර් එක ඇතුළට යන්න බැරි වුණොත්, ඒ කියන්නේ "No such file or directory" වගේ Error එකක් ආවොත්, ඒකෙන් කියන්නේ අකුරු වැරදිලා කියලා. ඒකත් තේරුම් අරන් ට්‍රයි කරන්න.<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 7. 03 වැනි පාඩම: දත්ත සමඟ ක්‍රීඩා කිරීම (File Manipulation) -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 03 වැනි පාඩම:</strong><br>
+                දත්ත සමඟ ක්‍රීඩා කිරීම (File Manipulation)<br>
+                පහුගිය දවස් දෙකේ අපි Termux එකේ ෆෝල්ඩර් හැදුවා, ඒ ඇතුළට ගියා. අද අපි ඉගෙන ගන්නේ ඒ ෆෝල්ඩර් ඇතුළේ ගොනු (Files) හදන්නේ, ඒවා මකන්නේ සහ ඒවා බලන්නේ කොහොමද කියලා.<br>
+                1. අද අපි ඉගෙන ගන්න කමාන්ඩ්ස් (File Operations)
+            </div>
+            <div class="cmd">
+                touch filename.txt: අලුත් ෆයිල් එකක් හදන්න. (උදා: touch secret.txt)<br>
+                nano filename.txt: ෆයිල් එකක් ඇතුළට ගිහින් ඒක ලියන්න/සම්පාදනය කරන්න. (මේක හරියට Notepad එකක් වගේ)<br>
+                cat filename.txt: ෆයිල් එකක තියෙන දේවල් කියවන්න.<br>
+                cp file1 file2: ෆයිල් එකක් කොපි කරන්න.<br>
+                mv file1 newlocation: ෆයිල් එකක් මාරු කරන්න (Move) හෝ නම වෙනස් කරන්න (Rename).<br>
+                rm filename: ෆයිල් එකක් මකන්න. (පරෙස්සමෙන්! මේකෙන් මැකුවොත් ආයේ ගන්න බැහැ.)
+            </div>
+            <div class="text-block">
+                CYBER BLACK LION TERMUX COURSE<br><br>
+                ඇයි මේවා වැදගත්?<br>
+                ඕනෑම පද්ධතියක තියෙන 'Config files' කියන්නේ ඔක්කොම ටෙක්ස්ට් ෆයිල්ස්. හැකර් කෙනෙක්ට මේ ෆයිල්ස් වල තියෙන දේවල් කියවන්න (cat), ඒවා වෙනස් කරන්න (nano), සහ අවශ්‍ය තැනකට ගෙනියන්න (mv) පුළුවන් වෙන්න ඕනේ.<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 03)</strong><br>
+                1. ඔයාගේ ෆෝල්ඩරේ ඇතුලේ hacking.txt කියලා ෆයිල් එකක් හදන්න (touch hacking.txt).<br>
+                2. nano hacking.txt භාවිතා කරලා ඒක ඇතුළට ගිහින් "I am a Grey Hat Hacker" කියලා ටයිප් කරලා, Ctrl බටන් එක සමග X ඔබලා (ඉන්පසු Y සහ Enter) save කරගන්න.<br>
+                3. cat hacking.txt ගහලා ඔයා ලියපු දේ පේනවාද කියලා බලන්න.<br>
+                4. අන්තිමට ඒ ෆයිල් එකේ නම වෙනස් කරන්න (mv hacking.txt my_goal.txt).<br>
+                චැලේන්ජ් එක: ඔයාගේ my_goal.txt ෆයිල් එක ඇතුලේ තියෙන දේ පේන ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                මචංලා, Nano එක පාවිච්චි කරද්දී ටිකක් පටලව ගන්න පුළුවන් (Save කරන එක). ඒ නිසා Ctrl බටන් එක්ක එක්ක මේ බට්න් X, Y, Enter ඔබන්න එතකොට සේවු වෙයි. <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a> ප්‍රශ්න ගැටලු අහන්න මේ ගෘප් එකේ.<br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- අවසාන කිසිදු අමතර කොටසක් නැහැ. සම්පූර්ණ වාක්ය ඇතුළත් වෙලා -->
+    </div>
+    <div class="footer">
+        CYBER BLACK LION · TERMUX COURSE · LK-HACKERS GRAY HAT
+    </div>
+</div>
+</body>
+</html>
