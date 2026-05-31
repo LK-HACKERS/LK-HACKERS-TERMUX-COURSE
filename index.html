@@ -96,17 +96,6 @@
             white-space: pre-wrap;
             margin-bottom: 16px;
         }
-        h3 {
-            font-size: 1.5rem;
-            margin: 20px 0 8px 0;
-            color: #e5c07b;
-            font-weight: 600;
-        }
-        h4 {
-            font-size: 1.2rem;
-            margin: 16px 0 6px;
-            color: #cbd5e6;
-        }
         strong {
             color: #f5c542;
         }
@@ -126,9 +115,7 @@
 <body>
 <div class="page">
     <div class="content">
-        <!-- හරියටම ලබා දුන් සියලුම පෙළ / කොටස් පහතින් ඇතුළත්. කිසිදු අමතර විස්තරයක් නැත. -->
-
-        <!-- 1. පළමු අභ්යාසය + පසුබිම -->
+        <!-- 1. පළමු අභ්යාසය (Practical Task 01) -->
         <div class="section">
             <div class="text-block">
                 <strong>🛠 පළමු අභ්‍යාසය (Practical Task 01)</strong><br>
@@ -308,7 +295,36 @@
             </div>
         </div>
 
-        <!-- අවසාන කිසිදු අමතර කොටසක් නැහැ. සම්පූර්ණ වාක්ය ඇතුළත් වෙලා -->
+        <!-- 8. 04 වැනි පාඩම: බලතල ලබා ගැනීම (Permissions) - නවතම පාඩම -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 04 වැනි පාඩම: බලතල ලබා ගැනීම (Permissions)</strong><br><br>
+                කලින් දවස්වල අපි ෆයිල්ස් හැදුවා, වෙනස් කළා. ඒත් හැම ෆයිල් එකක්ම හැමෝටම වෙනස් කරන්න බැහැ. <strong>Linux</strong> වල තියෙනවා <strong>"Permissions"</strong> කියලා ක්‍රමයක්. ඒකෙන් තීරණය කරන්නේ කාටද මේ ෆයිල් එක කියවන්න <strong>(Read)</strong>, ලියන්න <strong>(Write)</strong> සහ ක්‍රියාත්මක කරන්න <strong>(Execute)</strong> පුළුවන් කියලා.<br><br>
+                <strong>1. Permissions වර්ග 3</strong><br>
+                <strong>r</strong> (<em>Read</em>): ෆයිල් එක කියවන්න පුළුවන්.<br>
+                <strong>w</strong> (<em>Write</em>): ෆයිල් එක වෙනස් කරන්න හෝ මැකීමට පුළුවන්.<br>
+                <strong>x</strong> (<em>Execute</em>): ෆයිල් එක රන් කරන්න (Run) පුළුවන්.<br><br>
+                <strong>2. ප්‍රධාන කමාන්ඩ් එක: chmod</strong><br>
+                <strong>chmod</strong> (<em>Change Mode</em>) කියන්නේ මේ බලතල වෙනස් කරන්න පාවිච්චි කරන කමාන්ඩ් එක. අපි මේකේ අංක පාවිච්චි කරනවා:<br>
+                <strong>7</strong> (<em>r+w+x</em>): උපරිම බලතල.<br>
+                <strong>6</strong> (<em>r+w</em>): කියවන්න සහ ලියන්න පුළුවන්.<br>
+                <strong>4</strong> (<em>r</em>): කියවන්න විතරක් පුළුවන්.<br>
+                උදාහරණයක්: <strong>chmod 777 filename</strong> (මේකෙන් ඕනෑම කෙනෙක්ට ෆයිල් එක පාලනය කරන්න පුළුවන් වෙනවා - මේක හැකින් වලදී ගොඩක් පාවිච්චි වෙනවා).<br><br>
+                CYBER BLACK LION<br><br>
+                <strong>ඇයි මේවා වැදගත්?</strong><br>
+                අපි මොකක් හරි <em>ස්ක්‍රිප්ට්</em> එකක් (<em>Tool එකක්</em>) හැදුවොත්, ඒක පාවිච්චි කරන්න නම් අනිවාර්යයෙන්ම ඒකට <strong>x</strong> (<em>Execute</em>) පර්මිෂන් එක දෙන්න ඕනේ. නැත්නම් ටූල් එක වැඩ කරන්නේ නැහැ.<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 04)</strong><br>
+                පහුගිය දවසේ හැදුව <strong>my_goal.txt</strong> ෆයිල් එකේ දැනට තියෙන පර්මිෂන් බලන්න <strong>ls -l</strong> කියලා ගහන්න. (<em>එතන ඔයාට rwx වගේ අකුරු ටිකක් පෙනෙයි</em>).<br>
+                දැන් ඒ ෆයිල් එකට ඕනෑම කෙනෙක්ට ඕන දෙයක් කරන්න පුළුවන් විදිහට <strong>chmod 777 my_goal.txt</strong> කියලා ටයිප් කරන්න.<br>
+                ආයේ <strong>ls -l</strong> ගහලා පර්මිෂන් වෙනස් වෙලාද කියලා බලන්න.<br><br>
+                <strong>චැලේන්ජ් එක:</strong><br>
+                ඔයා <strong>ls -l</strong> ගැහුවාම ෆයිල් එකේ පර්මිෂන් පේන විදිහේ ස්ක්‍රීන්ෂොට් එකක් එවන්න. <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                අපි බලමු කාගෙද පර්මිෂන් ටික හරියට වෙනස් වෙලා තියෙන්නේ කියලා.<br><br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- අවසානය - කිසිදු අමතර දෙයක් නැත -->
     </div>
     <div class="footer">
         CYBER BLACK LION · TERMUX COURSE · LK-HACKERS GRAY HAT
