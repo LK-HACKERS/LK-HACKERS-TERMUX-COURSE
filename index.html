@@ -110,6 +110,17 @@
         a {
             color: #e5c07b;
         }
+        .code-block {
+            background: #07090f;
+            padding: 12px 18px;
+            border-radius: 20px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.85rem;
+            overflow-x: auto;
+            white-space: pre;
+            margin: 16px 0;
+            border-left: 4px solid #98c379;
+        }
     </style>
 </head>
 <body>
@@ -445,7 +456,7 @@
             </div>
         </div>
 
-        <!-- ======================== අලුත් පාඩම් 09-10 ======================== -->
+        <!-- ======================== පාඩම් 09-10 ======================== -->
 
         <!-- 13. 09 වැනි පාඩම: දත්ත ගබඩා කිරීම (Variables & User Input) -->
         <div class="section">
@@ -501,6 +512,45 @@
                 3) <strong>python auth.py</strong> කියලා රන් කරන්න.<br>
                 4) මුලින් වැරදි පාස්වර්ඩ් එකක් දීලා බලන්න, පස්සේ <strong>1234</strong> දීලා බලන්න මොකද වෙන්නේ කියලා.<br><br>
                 <strong>චැලේන්ජ් එක:</strong> පාස්වර්ඩ් එක හරි ගියහම <strong>"Access Granted!"</strong> කියලා එන ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- ======================== අලුත් පාඩම 11 ======================== -->
+
+        <!-- 15. 11 වැනි පාඩම: පළමු Port Scanner එක නිර්මාණය කිරීම -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 11 වැනි පාඩම: පළමු Port Scanner එක නිර්මාණය කිරීම.</strong><br><br>
+                අද අපි ඉගෙන ගත්ත සියලුම දේවල් පාවිච්චි කරලා, අනිත් අයගේ පද්ධතිවල දොරවල් ඇරිලද වහලද කියලා බලන පොඩි ටූල් එකක් හදනවා.<br><br>
+                <strong>1. අපේ ටූල් එකේ තර්කනය.</strong><br>
+                අපි මෙතනදී පාවිච්චි කරන්නේ <strong>socket</strong> කියන ලයිබ්‍රරි එක. ඒකෙන් පුළුවන් සර්වර් එකකට <strong>"හෙලෝ"</strong> කියලා කතා කරලා, ඒකෙන් උත්තර එනවද කියලා බලන්න.<br><br>
+                <strong>2. ටූල් එක ලියමු.</strong><br>
+                <strong>nano portscanner.py</strong> කියලා ෆයිල් එකක් හදලා මේ කෝඩ් එක ලියන්න.
+            </div>
+            <div class="code-block">
+import socket<br><br>
+target = input("Enter the IP to scan: ")<br>
+port = int(input("Enter the port to scan: "))<br><br>
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>
+socket.setdefaulttimeout(1)<br><br>
+result = s.connect_ex((target, port))<br>
+if result == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Port is OPEN!")<br>
+else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;print("Port is CLOSED!")<br>
+s.close()
+            </div>
+            <div class="text-block">
+                <strong>3. ඇයි මේක වැදගත්?</strong><br>
+                මේක නිකන්ම නිකන් කෝඩ් එකක් නෙවෙයි. මේකෙන් ඔයාට පුළුවන් ඕනෑම සර්වර් එකක තියෙන සේවාවක් <strong>(Web, SSH, FTP)</strong> වැඩ කරනවද නැද්ද කියලා තත්පරෙන් හොයාගන්න.<br><br>
+                CYBER BLACK LION<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 11)</strong><br>
+                1) උඩ තියෙන කෝඩ් එක හරියටම ටයිප් කරන්න. <strong>(ඉන්ඩෙන්ටේෂන් එක හෙවත් පේළි අතට තියෙන පරතරය හරියට තියාගන්න).</strong><br>
+                2) <strong>python portscanner.py</strong> කියලා රන් කරන්න.<br>
+                3) ඔයාගේ IP එක හෝ <strong>(Google IP: 8.8.8.8)</strong> සහ <strong>පෝට් එක 80</strong> කියලා දීලා බලන්න.<br><br>
+                <strong>චැලේන්ජ් එක:</strong> ඔයාගේ පෝට් එක <strong>"OPEN"</strong> හෝ <strong>"CLOSED"</strong> වෙලා එන අවුට්පුට් එකේ ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
                 <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
                 CYBER BLACK LION
             </div>
