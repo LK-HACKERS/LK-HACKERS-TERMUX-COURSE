@@ -517,9 +517,9 @@
             </div>
         </div>
 
-        <!-- ======================== අලුත් පාඩම 11 ======================== -->
+        <!-- ======================== පාඩම 11 ======================== -->
 
-        <!-- 15. 11 වැනි පාඩම: පළමු Port Scanner එක නිර්මාණය කිරීම -->
+        <!-- 15. 11 වැනි පාඩම: පළමු Port Scanner එක -->
         <div class="section">
             <div class="text-block">
                 <strong>🛡️ LK Hackers - 11 වැනි පාඩම: පළමු Port Scanner එක නිර්මාණය කිරීම.</strong><br><br>
@@ -551,6 +551,71 @@ s.close()
                 2) <strong>python portscanner.py</strong> කියලා රන් කරන්න.<br>
                 3) ඔයාගේ IP එක හෝ <strong>(Google IP: 8.8.8.8)</strong> සහ <strong>පෝට් එක 80</strong> කියලා දීලා බලන්න.<br><br>
                 <strong>චැලේන්ජ් එක:</strong> ඔයාගේ පෝට් එක <strong>"OPEN"</strong> හෝ <strong>"CLOSED"</strong> වෙලා එන අවුට්පුට් එකේ ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- ======================== අලුත් පාඩම් 12-13 ======================== -->
+
+        <!-- 16. 12 වැනි පාඩම: Automation with Loops -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 12 වැනි පාඩම: ස්වයංක්‍රීයකරණය (Automation with Loops)</strong><br><br>
+                අද අපි ඉගෙන ගන්නේ <strong>for loop</strong> ගැන. පරිගණකයකට එකම වැඩේ දහස් වතාවක් වුණත් මහන්සි නැතුව කරගන්න පුළුවන්. ඒ බලය තමයි අපි අද පාවිච්චි කරන්නේ.<br><br>
+                <strong>1. Loop එකක් කියන්නේ මොකක්ද?</strong><br>
+                අපි එක දෙයක් පියවරෙන් පියවර රිපීට් කරනවා නම්, අපිට පුළුවන් Loop එකක් දාන්න.<br>
+                • උදාහරණයක් විදිහට, 1 ඉඳන් 100 දක්වා පෝට්ස් ස්කෑන් කරන්න අපිට ලියන්න ඕනේ මෙහෙමයි.<br>
+                <code>for port in range(1, 101): print("Scanning port:", port)</code><br><br>
+                <strong>2. අපේ ස්කෑනර් එක දියුණු කරමු.</strong><br>
+                • දැන් අපි කලින් ලියපු කෝඩ් එකේ කොටසක් ලූප් එකක් ඇතුළට දාමු.
+            </div>
+            <div class="code-block">
+import socket<br>
+target = input("Enter IP: ")<br>
+for port in range(1, 101):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;socket.setdefaulttimeout(0.5)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;result = s.connect_ex((target, port))<br>
+&nbsp;&nbsp;&nbsp;&nbsp;if result == 0:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(f"Port {port} is OPEN!")<br>
+&nbsp;&nbsp;&nbsp;&nbsp;s.close()
+            </div>
+            <div class="text-block">
+                <strong>3. ඇයි මේක වැදගත්?</strong><br>
+                • හැකින් වලදී අපිට එක පෝට් එකක් නෙවෙයි, දහස් ගණන් පෝට්ස් ස්කෑන් කරන්න වෙනවා. මේ ලූප් එක නැතුව නම් අපිට ඒක කරගන්න වෙන්නේ නැහැ. මේක තමයි අපේ ටූල් එක 'Automation' එකකට ගෙනියන විදිහ.<br><br>
+                CYBER BLACK LION<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 12)</strong><br>
+                1) <strong>nano auto_scanner.py</strong> කියලා ෆයිල් එකක් හදන්න.<br>
+                2) උඩ තියෙන කෝඩ් එක ඒකට ලියන්න.<br>
+                3) ඒක රන් කරන්න. (පරෙස්සමින් පෝට් 100ක් ස්කෑන් වෙනකොට ටිකක් වෙලා යන්න පුළුවන්, ඉවසීමෙන් ඉන්න).<br><br>
+                <strong>චැලේන්ජ් එක:</strong> ඔයාගේ IP එක ස්කෑන් කරලා, එතන OPEN පෝට්ස් මොනවාද කියලා එන අවුට්පුට් එකේ ස්ක්‍රීන්ෂොට් එකක් එවන්න.<br>
+                <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
+                CYBER BLACK LION
+            </div>
+        </div>
+
+        <!-- 17. 13 වැනි පාඩම: Social Engineering -->
+        <div class="section">
+            <div class="text-block">
+                <strong>🛡️ LK Hackers - 13 වැනි පාඩම: සමාජ ඉංජිනේරු විද්‍යාව (Social Engineering)</strong><br><br>
+                • තාක්ෂණයෙන් පද්ධතියක් ආරක්ෂා වෙලා තිබුණත්, ඒක පාවිච්චි කරන "මිනිස්සු" හරහා පද්ධතියට ඇතුළු වෙන්න පුළුවන්. මේ කලාවට අපි කියන්නේ Social Engineering කියලා.<br><br>
+                <strong>1. Social Engineering යනු කුමක්ද?</strong><br>
+                • මේක හැකින් වලදී පාවිච්චි කරන්නේ මිනිස්සුන්ව රවට්ටලා (Manipulation) ඔවුන්ගේ රහස්‍ය තොරතුරු ලබාගන්නයි. ලෝකයේ ප්‍රසිද්ධම හැකර්වරු පවා මුලින්ම පාවිච්චි කළේ මේ ක්‍රමයයි.<br>
+                උදාහරණයක්: කෙනෙක්ට බොරු ලින්ක් එකක් එවල ඔවුන්ගේ පාස්වර්ඩ් එක ලබාගන්න (Phishing).<br><br>
+                <strong>2. හැකර් කෙනෙක් මේක තේරුම් ගත යුත්තේ ඇයි?</strong><br>
+                ආරක්ෂාව සඳහා: අපේම ෆෝන් එකක් හෝ ගිණුමක් ආරක්ෂා කරගන්න නම්, කවුරුහරි අපිට මොන වගේ බොරු කියයිද කියලා අපි දැනගන්න ඕනේ.<br>
+                දුර්වලතා සෙවීම: බොහෝ විට පද්ධතියක දොරගුළු දාලා තිබුණත්, කවුරුහරි ඒ දොර ඇරලා තියෙනවා නම් ඒක තමයි ලොකුම හිඩැස.<br><br>
+                <strong>3. ප්‍රධාන වර්ග කිහිපයක්.</strong><br>
+                <strong>Phishing:</strong> ව්‍යාජ වෙබ් සයිට් හෝ ඊමේල් හරහා තොරතුරු ගැනීම.<br>
+                <strong>Pretexting:</strong> ව්‍යාජ චරිතයක් මවාගෙන (උදා: බැංකු නිලධාරියෙක් ලෙස) කතා කිරීම.<br>
+                <strong>Baiting:</strong> නොමිලේ මෘදුකාංග හෝ ලින්ක්ස් ලබා දෙන බව පවසා වයිරස් හෝ මෘදුකාංග ස්ථාපනය කරවීම.<br><br>
+                CYBER BLACK LION<br><br>
+                <strong>🛠 ප්‍රායෝගික අභ්‍යාසය (Task 13)</strong><br>
+                අද අපි කරන්නේ ප්‍රායෝගිකව තොරතුරු සොයන එක (OSINT - Open Source Intelligence).<br>
+                ඔයාගේ ප්‍රියතම වෙබ් සයිට් එකක් තියෙනවා නම්, ඒකේ තියෙන "About Us" හෝ "Contact" පිටුවට ගිහින් ඒ සමාගම ගැන තියෙන තොරතුරු මොනවාද කියලා බලන්න.<br>
+                තොරතුරු ලබා ගන්නා විට කෙනෙක්ට දැනෙන්නේ කොහොමද, ඒ තොරතුරු කොච්චර නිවැරදිද කියලා හිතන්න.<br><br>
+                <strong>චැලේන්ජ් එක:</strong> අපිට ආරක්ෂිතව ඉන්න පුළුවන් ක්‍රමයක් ගැන (උදා: 2FA - Two Factor Authentication) ඔයා දන්න දේ කෙටියෙන් ගෲප් එකේ සාකච්ඡා කරන්න.<br>
                 <a href="https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS" target="_blank" class="link">https://chat.whatsapp.com/FhPkeRBUbM2DNKE1Z86VVS</a><br>
                 CYBER BLACK LION
             </div>
