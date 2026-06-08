@@ -10,25 +10,45 @@
             padding: 0;
             box-sizing: border-box;
         }
+
+        /* Canvas for Red/Blue/Black Particle Animation (full screen) */
+        #particleCanvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            z-index: 0;
+            background: #000000; /* pure black background */
+        }
+
         body {
-            background: #0b0e14;
+            background: transparent; /* let canvas show through */
             font-family: 'Segoe UI', 'Fira Code', 'Courier New', monospace;
             color: #eceff4;
             padding: 24px 16px;
             line-height: 1.55;
+            position: relative;
+            z-index: 1;
         }
+
+        /* Page container with semi-transparent background to see animation */
         .page {
             max-width: 1000px;
             margin: 0 auto;
-            background: #0f121a;
+            background: rgba(15, 18, 26, 0.85); /* semi-transparent dark */
+            backdrop-filter: blur(4px);
             border-radius: 32px;
             border: 1px solid #2a2f3c;
             overflow: hidden;
             box-shadow: 0 20px 30px -12px rgba(0,0,0,0.6);
         }
+
         .content {
             padding: 28px 24px;
         }
+
         .section {
             margin-bottom: 32px;
             padding-bottom: 20px;
@@ -38,7 +58,7 @@
             border-bottom: none;
         }
         .cmd {
-            background: #07090f;
+            background: rgba(7, 9, 15, 0.9);
             padding: 12px 18px;
             border-radius: 20px;
             font-family: 'Fira Code', monospace;
@@ -51,14 +71,14 @@
             color: #d6deeb;
         }
         .warning-box {
-            background: #1f1b1a;
+            background: rgba(31, 27, 26, 0.9);
             border-left: 5px solid #e06c75;
             padding: 12px 20px;
             border-radius: 20px;
             margin: 18px 0;
         }
         .success-box {
-            background: #16222b;
+            background: rgba(22, 34, 43, 0.9);
             border-left: 5px solid #98c379;
             padding: 12px 20px;
             border-radius: 20px;
@@ -100,7 +120,7 @@
             color: #f5c542;
         }
         .footer {
-            background: #06080e;
+            background: rgba(6, 8, 14, 0.9);
             text-align: center;
             padding: 18px;
             font-size: 0.75rem;
@@ -111,7 +131,7 @@
             color: #e5c07b;
         }
         .code-block {
-            background: #07090f;
+            background: rgba(7, 9, 15, 0.9);
             padding: 12px 18px;
             border-radius: 20px;
             font-family: 'Fira Code', monospace;
@@ -124,6 +144,10 @@
     </style>
 </head>
 <body>
+
+<!-- Red/Blue/Black Particle Animation Canvas (full screen) -->
+<canvas id="particleCanvas"></canvas>
+
 <div class="page">
     <div class="content">
         <!-- ======================== පාඩම් 01 - 04 ======================== -->
@@ -627,5 +651,97 @@ for port in range(1, 101):<br>
         CYBER BLACK LION · TERMUX COURSE · LK-HACKERS GRAY HAT
     </div>
 </div>
+
+<script>
+    // ========== RED, BLUE, BLACK PARTICLE ANIMATION (FULL SCREEN) ==========
+    const canvas = document.getElementById('particleCanvas');
+    let ctx = canvas.getContext('2d');
+    let particles = [];
+    let width, height;
+    const connectionDistance = 150;
+    let particleCount = 110;
+
+    function initParticles() {
+        particles = [];
+        for (let i = 0; i < particleCount; i++) {
+            particles.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.9,
+                vy: (Math.random() - 0.5) * 0.9,
+                radius: 3 + Math.random() * 6,
+                color: Math.random() > 0.5 ? '#ff0000' : '#3a86ff'
+            });
+        }
+    }
+
+    function resizeCanvas() {
+        width = window.innerWidth;
+        height = window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+        initParticles();
+    }
+
+    function drawParticles() {
+        if (!ctx) return;
+        // Black background
+        ctx.fillStyle = '#000000';
+        ctx.fillRect(0, 0, width, height);
+
+        // Draw connections (lines)
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < connectionDistance) {
+                    let lineColor = (particles[i].color === '#ff0000' || particles[j].color === '#ff0000') ? '#ff4444' : '#4488ff';
+                    ctx.beginPath();
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.strokeStyle = lineColor;
+                    ctx.lineWidth = 1.2;
+                    ctx.stroke();
+                }
+            }
+        }
+
+        // Draw particles with glow
+        for (let p of particles) {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+            ctx.fillStyle = p.color;
+            ctx.fill();
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = p.color === '#ff0000' ? '#ff0000' : '#3a86ff';
+            ctx.fill();
+            ctx.shadowBlur = 0;
+        }
+
+        // Update positions
+        for (let p of particles) {
+            p.x += p.vx;
+            p.y += p.vy;
+            if (p.x < 0) { p.x = 0; p.vx = -p.vx; }
+            if (p.x > width) { p.x = width; p.vx = -p.vx; }
+            if (p.y < 0) { p.y = 0; p.vy = -p.vy; }
+            if (p.y > height) { p.y = height; p.vy = -p.vy; }
+        }
+
+        requestAnimationFrame(drawParticles);
+    }
+
+    window.addEventListener('resize', () => {
+        resizeCanvas();
+    });
+    window.addEventListener('orientationchange', () => {
+        setTimeout(resizeCanvas, 50);
+    });
+
+    resizeCanvas();
+    drawParticles();
+</script>
+
 </body>
 </html>
